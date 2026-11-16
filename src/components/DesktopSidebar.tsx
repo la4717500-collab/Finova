@@ -17,6 +17,7 @@ import {
   LogOut,
 } from 'lucide-react';
 import { useFinance } from '../context/FinanceContext';
+import { PWAInstallButton } from './common/PWAInstallButton';
 
 interface DesktopSidebarProps {
   onOpenHelp: () => void;
@@ -102,8 +103,10 @@ export const DesktopSidebar: React.FC<DesktopSidebarProps> = ({ onOpenHelp }) =>
         </div>
       </div>
 
-      {/* Bottom Settings and Help */}
+      {/* Bottom Settings, Install App and Help */}
       <div className="p-3 border-t border-slate-100 space-y-2">
+        {/* PWA Install Button in Sidebar */}
+        <PWAInstallButton variant="sidebar" />
 
         <div className="flex items-center justify-between px-2 pt-1 text-xs text-slate-500">
           <button

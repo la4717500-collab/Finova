@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronDown, Crown, Shield, User, LogIn, Sparkles, LogOut } from 'lucide-react';
 import { useFinance } from '../context/FinanceContext';
+import { PWAInstallButton } from './common/PWAInstallButton';
 
 export const Header: React.FC = () => {
   const {
@@ -61,8 +62,10 @@ export const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* Right: Admin Shortcut, Crown and Logout */}
+        {/* Right: Admin Shortcut, Install App, Crown and Logout */}
         <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
+          {/* PWA Install Button */}
+          <PWAInstallButton variant="header" />
 
           {/* Admin shortcut if logged in as Master Admin */}
           {isAdmin && (

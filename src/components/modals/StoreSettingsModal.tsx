@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Store, X, Save, RotateCcw, ShieldCheck, Check } from 'lucide-react';
+import { Store, X, Save, RotateCcw, ShieldCheck, Check, Smartphone } from 'lucide-react';
 import { useFinance } from '../../context/FinanceContext';
+import { PWAInstallButton } from '../common/PWAInstallButton';
 
 export const StoreSettingsModal: React.FC = () => {
   const {
@@ -370,6 +371,24 @@ export const StoreSettingsModal: React.FC = () => {
                 </div>
               </div>
             )}
+          </div>
+
+          {/* App Installation on Mobile & Desktop */}
+          <div className="p-3.5 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <img
+                  src="/pwa-192x192.png"
+                  alt="Fino Logo"
+                  className="w-7 h-7 rounded-lg border border-amber-400/40 object-cover shadow-2xs"
+                />
+                <div>
+                  <h4 className="text-xs font-bold text-slate-900">Instalar App Fino</h4>
+                  <p className="text-[10px] text-slate-500">Agrega el icono directo a tu pantalla de inicio</p>
+                </div>
+              </div>
+              <PWAInstallButton variant="compact" />
+            </div>
           </div>
 
           {/* Reset Demo Data */}

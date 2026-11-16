@@ -85,7 +85,7 @@ export const FinovaLogo: React.FC<FinovaLogoProps> = ({
                   : 'text-slate-950'
               }`}
             >
-              FINOVA
+              FINO
             </span>
           </div>
           {variant === 'full' && (

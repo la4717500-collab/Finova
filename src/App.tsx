@@ -30,6 +30,7 @@ import { ImportOldCompanyModal } from './components/modals/ImportOldCompanyModal
 import { BusinessOnboardingModal } from './components/modals/BusinessOnboardingModal';
 import { CustomersView } from './views/CustomersView';
 import { AuthScreen } from './components/auth/AuthScreen';
+import { OfflineIndicator } from './components/common/OfflineIndicator';
 
 const MainAppContent: React.FC = () => {
   const { activeTab } = useFinance();
@@ -103,6 +104,7 @@ const MainAppContent: React.FC = () => {
       <BusinessOnboardingModal />
       <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
       <HelpModal isOpen={isHelpOpen} onClose={() => setIsHelpOpen(false)} />
+      <OfflineIndicator />
     </div>
   );
 };
